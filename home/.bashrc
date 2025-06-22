@@ -113,7 +113,6 @@ alias reload="source ~/.zshrc"
 alias zshrc="code ~/.zshrc"
 
 # docker aliases
-alias d="docker"
 alias dkill="docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q) && docker network prune"
 alias dps="docker ps"
 alias dpsa="docker ps -a"
