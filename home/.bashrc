@@ -122,3 +122,12 @@ alias dcreset="dcd && dcu"
 
 #k8s aliases
 alias k='kubectl'
+
+#folder aliases
+alias desktop="cd ~/Desktop"
+alias downloads="cd ~/Downloads"
+alias documents="cd ~/Documents"
+alias music="cd ~/Music"
+alias pictures="cd ~/Pictures"
+alias videos="cd ~/Videos"
+alias projects="cd ~/Documents/Projects"
