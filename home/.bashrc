@@ -34,6 +34,17 @@ export OFLAGS="--ozone-platform-hint=auto"
 
 export PATH=$PATH:$HOME/.local/bin
 
+# system aliases
+alias l='ls -alh'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias ll='ls -lhi'
+alias ta='tmux attach'
+alias t='tmux'
+alias v='nvim'
+alias t='tmux'
+alias raid='sudo mdadm --detail /dev/md0'
+alias unp='unp -U' # Extract any file type
 
 # git aliases
 alias gdefault="git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4"
@@ -91,17 +102,18 @@ function pr() {
   open_or_start='open'
   uname=$(uname)
   if [[ "$uname" == CYGWIN* || "$uname" == MINGW* || "$uname" == MSYS* ]] ; then
-	open_or_start='start'
+        open_or_start='start'
   fi
   pr_url=$github_url"/compare/$main_branch..."$branch_name
   $open_or_start $pr_url
 }
 
 # general aliases
-alias reload="source ~/.bashrc"
-alias bashrc="code ~/.bashrc"
+alias reload="source ~/.zshrc"
+alias zshrc="code ~/.zshrc"
 
 # docker aliases
+alias d="docker"
 alias dkill="docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q) && docker network prune"
 alias dps="docker ps"
 alias dpsa="docker ps -a"
